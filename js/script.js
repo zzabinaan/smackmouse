@@ -35,21 +35,18 @@ timerjalan = timer;
 
 function playSmack() {
   bgmtimer.play();
-  console.log("berhasil masuk overlay");
   overlay1.style.display = "none";
   start();
 }
 
 function nextSmack() {
   gamewin.play();
-  console.log("berhasil masuk overlay next");
   overlay3.style.display = "none";
   start();
 }
 
 function retrySmack() {
   bgmtimer.play();
-  console.log("berhasil masuk overlay retry");
   overlay4.style.display = "none";
   ready = false;
   count = 3;
@@ -58,7 +55,6 @@ function retrySmack() {
 }
 
 function backSmack() {
-  console.log("berhasil masuk overlay back");
   overlay5.style.display = "none";
   window.location.replace("level1.html");
 }
@@ -91,7 +87,7 @@ function munculTikus() {
   } else if (lvl == 2) {
     twtikus = randomWaktu(900, 1200);
   } else {
-    twtikus = randomWaktu(600, 900);
+    twtikus = randomWaktu(500, 900);
   }
 
   if (trtikus != trbom) {
@@ -140,14 +136,9 @@ function runGame() {
 }
 
 function selesai() {
-  console.log("selesai?" + finish);
   trbom.classList.remove("bum");
   trtikus.classList.remove("muncul");
-  // overlay1--play
-  // overlay2--ready
-  // overlay3--nextlevel
-  // overlay4--gameover
-  // overlay5--winner
+
   if (lvl == 1) {
     if (skor > 6) {
       window.location.replace("level2.html");
